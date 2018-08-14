@@ -22,6 +22,10 @@
 		F1D9A9F3212367D500927706 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D9A9E3212363B900927706 /* Quick.framework */; };
 		F1D9A9F6212377F700927706 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A9F5212377F700927706 /* Environment.swift */; };
 		F1D9A9F92123783800927706 /* EnvironmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A9F82123783800927706 /* EnvironmentTests.swift */; };
+		F1D9A9FC212378BE00927706 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A9FB212378BE00927706 /* Network.swift */; };
+		F1D9A9FF212378FF00927706 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A9FE212378FF00927706 /* NetworkTests.swift */; };
+		F1D9AA022123791400927706 /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9AA012123791400927706 /* Stubs.swift */; };
+		F1D9AA05212379AE00927706 /* jsonmock.json in Resources */ = {isa = PBXBuildFile; fileRef = F1D9AA04212379AE00927706 /* jsonmock.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 		F1D9A9EE212365F000927706 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		F1D9A9F5212377F700927706 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		F1D9A9F82123783800927706 /* EnvironmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentTests.swift; sourceTree = "<group>"; };
+		F1D9A9FB212378BE00927706 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		F1D9A9FE212378FF00927706 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		F1D9AA012123791400927706 /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
+		F1D9AA04212379AE00927706 /* jsonmock.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonmock.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,7 @@
 		F1D9A9BD21234D3000927706 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				F1D9A9FA212378AE00927706 /* Network */,
 				F1D9A9F4212377DF00927706 /* Util */,
 				F1D9A9D6212356B500927706 /* ViewController */,
 				F1D9A9BE21234D3000927706 /* Launch */,
@@ -148,6 +157,8 @@
 		F1D9A9C921234D3000927706 /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				F1D9AA002123790600927706 /* Stubs */,
+				F1D9A9FD212378EA00927706 /* NetworkTests */,
 				F1D9A9F72123781A00927706 /* UtilTests */,
 				F1D9A9DC2123632500927706 /* ViewController */,
 				F1D9A9CC21234D3000927706 /* Info.plist */,
@@ -200,6 +211,39 @@
 				F1D9A9F82123783800927706 /* EnvironmentTests.swift */,
 			);
 			path = UtilTests;
+			sourceTree = "<group>";
+		};
+		F1D9A9FA212378AE00927706 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F1D9A9FB212378BE00927706 /* Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F1D9A9FD212378EA00927706 /* NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1D9A9FE212378FF00927706 /* NetworkTests.swift */,
+			);
+			path = NetworkTests;
+			sourceTree = "<group>";
+		};
+		F1D9AA002123790600927706 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				F1D9AA032123792200927706 /* jsonmock */,
+				F1D9AA012123791400927706 /* Stubs.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		F1D9AA032123792200927706 /* jsonmock */ = {
+			isa = PBXGroup;
+			children = (
+				F1D9AA04212379AE00927706 /* jsonmock.json */,
+			);
+			path = jsonmock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +340,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1D9AA05212379AE00927706 /* jsonmock.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +405,7 @@
 			files = (
 				F1D9A9D8212356D900927706 /* ViewController.swift in Sources */,
 				F1D9A9F6212377F700927706 /* Environment.swift in Sources */,
+				F1D9A9FC212378BE00927706 /* Network.swift in Sources */,
 				F1D9A9CE21234D3000927706 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,8 +414,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1D9A9FF212378FF00927706 /* NetworkTests.swift in Sources */,
 				F1D9A9F02123665300927706 /* ViewControllerTests.swift in Sources */,
 				F1D9A9F92123783800927706 /* EnvironmentTests.swift in Sources */,
+				F1D9AA022123791400927706 /* Stubs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

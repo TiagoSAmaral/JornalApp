@@ -10,7 +10,7 @@
 import Foundation
 import Quick
 import Nimble
-@testable import skymovies
+@testable import jornalapp
 
 class EnvironmentTests: QuickSpec {
 
