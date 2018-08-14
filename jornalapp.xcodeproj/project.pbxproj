@@ -20,6 +20,8 @@
 		F1D9A9F1212367D500927706 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D9A9E0212363B900927706 /* Nimble.framework */; };
 		F1D9A9F2212367D500927706 /* OHHTTPStubs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D9A9E5212363BA00927706 /* OHHTTPStubs.framework */; };
 		F1D9A9F3212367D500927706 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1D9A9E3212363B900927706 /* Quick.framework */; };
+		F1D9A9F6212377F700927706 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A9F5212377F700927706 /* Environment.swift */; };
+		F1D9A9F92123783800927706 /* EnvironmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A9F82123783800927706 /* EnvironmentTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		F1D9A9E4212363B900927706 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		F1D9A9E5212363BA00927706 /* OHHTTPStubs.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OHHTTPStubs.framework; path = Carthage/Build/iOS/OHHTTPStubs.framework; sourceTree = "<group>"; };
 		F1D9A9EE212365F000927706 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
+		F1D9A9F5212377F700927706 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		F1D9A9F82123783800927706 /* EnvironmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		F1D9A9BD21234D3000927706 /* app */ = {
 			isa = PBXGroup;
 			children = (
+				F1D9A9F4212377DF00927706 /* Util */,
 				F1D9A9D6212356B500927706 /* ViewController */,
 				F1D9A9BE21234D3000927706 /* Launch */,
 				F1D9A9C121234D3000927706 /* System */,
@@ -143,6 +148,7 @@
 		F1D9A9C921234D3000927706 /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				F1D9A9F72123781A00927706 /* UtilTests */,
 				F1D9A9DC2123632500927706 /* ViewController */,
 				F1D9A9CC21234D3000927706 /* Info.plist */,
 			);
@@ -178,6 +184,22 @@
 				F1D9A9E2212363B900927706 /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1D9A9F4212377DF00927706 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				F1D9A9F5212377F700927706 /* Environment.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		F1D9A9F72123781A00927706 /* UtilTests */ = {
+			isa = PBXGroup;
+			children = (
+				F1D9A9F82123783800927706 /* EnvironmentTests.swift */,
+			);
+			path = UtilTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1D9A9D8212356D900927706 /* ViewController.swift in Sources */,
+				F1D9A9F6212377F700927706 /* Environment.swift in Sources */,
 				F1D9A9CE21234D3000927706 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1D9A9F02123665300927706 /* ViewControllerTests.swift in Sources */,
+				F1D9A9F92123783800927706 /* EnvironmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
