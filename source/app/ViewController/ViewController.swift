@@ -10,9 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	var presenter: ViewLogic!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+}
+
+class ViewLogic {
+
+	var view: ViewController!
+
+	init(view: ViewController) {
+
+		self.view = view
+	}
 }
