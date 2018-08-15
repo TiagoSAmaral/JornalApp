@@ -27,8 +27,8 @@ class Router: RouterInterface {
 
 		case .notices:
 
-			let viewInstance: ViewController = self.buildView(ViewController.identifier, ViewController.identifier, ViewController.self)
-			viewInstance.presenter = ViewLogic(view: viewInstance)
+			let viewInstance: NewsView = self.buildView(NewsView.identifier, NewsView.identifier, NewsView.self)
+			viewInstance.presenter = News(view: viewInstance, router: self)
 			self.view?.setViewControllers([viewInstance], animated: false)
 
 		case .noticedetail:
