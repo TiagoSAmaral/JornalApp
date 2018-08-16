@@ -6,11 +6,13 @@
 //  Copyright © 2018 com.outlook.tiagofly. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol NewsInterface {
 	var sizeList: Int { get }
 	func viewDidAppear()
+	func buildCell(at indexPath: IndexPath, inTo collection: UITableView) -> UITableViewCell
+	func selectCell(at index: Int)
 }
 
 class News: NewsInterface {
@@ -61,5 +63,16 @@ class News: NewsInterface {
 		self.sizeList = self.novelties.count
 		self.view.setBanner(with: self.novelties.first!)
 		self.view.reloadList()
+	}
+
+	func buildCell(at indexPath: IndexPath, inTo tableView: UITableView) -> UITableViewCell {
+
+		let cell = tableView.dequeueReusableCell(withIdentifier: NoveltyCell.identifier, for: indexPath) as! NoveltyCell
+		cell.setupCell(with: self.novelties[indexPath.row])
+		return cell
+	}
+
+	func selectCell(at index: Int) {
+		self.router.goTo(destiny: .noticedetail, pushfoward: self.novelties[index])
 	}
 }
