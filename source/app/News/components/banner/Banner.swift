@@ -14,6 +14,7 @@ class Banner: UIView {
 	@IBOutlet var photo: UIImageView!
 	@IBOutlet var title: UILabel!
 	@IBOutlet var section: UILabel!
+	private var defaultCoder: UIImage = UIImage(named: "cover-banner")!
 
 	override func draw(_ rect: CGRect) {
 		// Drawing code
@@ -26,7 +27,7 @@ class Banner: UIView {
 
 	func setBanner(with notice: Novelty) {
 
-		self.photo.kf.setImage(with: notice.imagens![0].sourceUrl!, placeholder: UIImage(named: "cover-default")!)
+		self.photo.kf.setImage(with: notice.imagens![0].sourceUrl!, placeholder: defaultCoder)
 		self.section.text = notice.secao!.nome!
 		self.title.text = notice.titulo
 		self.section.isHidden = false
