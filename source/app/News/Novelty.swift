@@ -90,7 +90,7 @@ struct Novelty: Codable {
 		}
 
 		self.informePublicitario = json[JsonProperty.advertising.rawValue].bool
-		self.subTitulo = json[JsonProperty.caption.hashValue].string
+		self.subTitulo = json[JsonProperty.caption.rawValue].string
 		self.texto = json[JsonProperty.text.rawValue].string
 		self.atualizadoEm = json[JsonProperty.updatedAt.rawValue].string
 		self.identifier = json[JsonProperty.identifier.rawValue].int
