@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F18D76142124D1AD00834A85 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18D76132124D1AD00834A85 /* UIView+Gradient.swift */; };
 		F18D76172124D4B800834A85 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18D76162124D4B800834A85 /* Banner.swift */; };
+		F18D761E2125009600834A85 /* NoveltyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18D761C2125009600834A85 /* NoveltyCell.swift */; };
+		F18D761F2125009600834A85 /* NoveltyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F18D761D2125009600834A85 /* NoveltyCell.xib */; };
+		F18D76212125043500834A85 /* NewsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18D76202125043500834A85 /* NewsTableView.swift */; };
 		F1D9A9CD21234D3000927706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D9A9BF21234D3000927706 /* LaunchScreen.storyboard */; };
 		F1D9A9CE21234D3000927706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A9C221234D3000927706 /* AppDelegate.swift */; };
 		F1D9A9D021234D3000927706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D9A9C521234D3000927706 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 /* Begin PBXFileReference section */
 		F18D76132124D1AD00834A85 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
 		F18D76162124D4B800834A85 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		F18D761C2125009600834A85 /* NoveltyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoveltyCell.swift; sourceTree = "<group>"; };
+		F18D761D2125009600834A85 /* NoveltyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoveltyCell.xib; sourceTree = "<group>"; };
+		F18D76202125043500834A85 /* NewsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableView.swift; sourceTree = "<group>"; };
 		F1C1D32B211F894E00834C54 /* jornalapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jornalapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C1D33F211F895100834C54 /* jornalappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jornalappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D9A9C021234D3000927706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -308,6 +314,7 @@
 		F1D9AA122124473F00927706 /* list */ = {
 			isa = PBXGroup;
 			children = (
+				F18D76202125043500834A85 /* NewsTableView.swift */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -315,6 +322,8 @@
 		F1D9AA132124474400927706 /* cell */ = {
 			isa = PBXGroup;
 			children = (
+				F18D761C2125009600834A85 /* NoveltyCell.swift */,
+				F18D761D2125009600834A85 /* NoveltyCell.xib */,
 			);
 			path = cell;
 			sourceTree = "<group>";
@@ -404,6 +413,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1D9A9D021234D3000927706 /* Assets.xcassets in Resources */,
+				F18D761F2125009600834A85 /* NoveltyCell.xib in Resources */,
 				F1D9A9CD21234D3000927706 /* LaunchScreen.storyboard in Resources */,
 				F1D9A9DA212356E700927706 /* NewsView.storyboard in Resources */,
 			);
@@ -488,7 +498,9 @@
 				F1D9AA16212447AD00927706 /* NewsNetwork.swift in Sources */,
 				F1D9AA0C212394B900927706 /* Router.swift in Sources */,
 				F1D9AA0A2123944D00927706 /* RouterView.swift in Sources */,
+				F18D76212125043500834A85 /* NewsTableView.swift in Sources */,
 				F1D9A9FC212378BE00927706 /* Network.swift in Sources */,
+				F18D761E2125009600834A85 /* NoveltyCell.swift in Sources */,
 				F1D9A9CE21234D3000927706 /* AppDelegate.swift in Sources */,
 				F1D9AA1A21244D3F00927706 /* ApiPaths.swift in Sources */,
 			);
@@ -677,6 +689,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				GCC_OPTIMIZATION_LEVEL = s;
 				INFOPLIST_FILE = "$(SRCROOT)/source/app/System/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -684,6 +697,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.outlook.tiagofly.jornalapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Osize";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
