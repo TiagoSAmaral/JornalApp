@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F18D76142124D1AD00834A85 /* UIView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18D76132124D1AD00834A85 /* UIView+Gradient.swift */; };
+		F18D76172124D4B800834A85 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F18D76162124D4B800834A85 /* Banner.swift */; };
 		F1D9A9CD21234D3000927706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D9A9BF21234D3000927706 /* LaunchScreen.storyboard */; };
 		F1D9A9CE21234D3000927706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A9C221234D3000927706 /* AppDelegate.swift */; };
 		F1D9A9D021234D3000927706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D9A9C521234D3000927706 /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F18D76132124D1AD00834A85 /* UIView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Gradient.swift"; sourceTree = "<group>"; };
+		F18D76162124D4B800834A85 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
 		F1C1D32B211F894E00834C54 /* jornalapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jornalapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1C1D33F211F895100834C54 /* jornalappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = jornalappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1D9A9C021234D3000927706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -107,6 +111,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F18D76152124D4AB00834A85 /* banner */ = {
+			isa = PBXGroup;
+			children = (
+				F18D76162124D4B800834A85 /* Banner.swift */,
+			);
+			path = banner;
+			sourceTree = "<group>";
+		};
 		F1C1D322211F894E00834C54 = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +238,7 @@
 				F1D9A9F5212377F700927706 /* Environment.swift */,
 				F1D9AA0D2123A1DD00927706 /* NSObject+Identifier.swift */,
 				F1D9AA1B2124579500927706 /* UIViewController+Alert.swift */,
+				F18D76132124D1AD00834A85 /* UIView+Gradient.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -285,7 +298,7 @@
 		F1D9AA112124473600927706 /* components */ = {
 			isa = PBXGroup;
 			children = (
-				F1D9AA142124474900927706 /* banner */,
+				F18D76152124D4AB00834A85 /* banner */,
 				F1D9AA132124474400927706 /* cell */,
 				F1D9AA122124473F00927706 /* list */,
 			);
@@ -304,13 +317,6 @@
 			children = (
 			);
 			path = cell;
-			sourceTree = "<group>";
-		};
-		F1D9AA142124474900927706 /* banner */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = banner;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -470,7 +476,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F18D76142124D1AD00834A85 /* UIView+Gradient.swift in Sources */,
 				F1D9A9D8212356D900927706 /* NewsView.swift in Sources */,
+				F18D76172124D4B800834A85 /* Banner.swift in Sources */,
 				F1D9AA182124483700927706 /* Novelty.swift in Sources */,
 				F1D9A9F6212377F700927706 /* Environment.swift in Sources */,
 				F1D9AA1C2124579500927706 /* UIViewController+Alert.swift in Sources */,
