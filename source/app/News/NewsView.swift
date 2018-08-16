@@ -18,13 +18,14 @@ protocol NewsViewInterface: class {
 class NewsView: UIViewController, NewsViewInterface {
 
 	var presenter: NewsInterface!
-	var listNews: UITableView!
+	@IBOutlet var listNews: NewsTableView!
 	@IBOutlet var banner: Banner!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+		self.listNews.presenter = self.presenter
     }
 
 	override func viewDidAppear(_ animated: Bool) {
@@ -34,11 +35,10 @@ class NewsView: UIViewController, NewsViewInterface {
 	}
 
 	func reloadList() {
-
+		self.listNews.reloadData()
 	}
 
 	func setBanner(with notice: Novelty) {
-
 		self.banner.setBanner(with: notice)
 	}
 }
