@@ -12,12 +12,14 @@ protocol NewsViewInterface: class {
 
 	func reloadList()
 	func showAlert(with title: String, and message: String, completion: (() -> Void)?)
+	func setBanner(with notice: Novelty)
 }
 
 class NewsView: UIViewController, NewsViewInterface {
 
 	var presenter: NewsInterface!
 	var listNews: UITableView!
+	@IBOutlet var banner: Banner!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,5 +35,10 @@ class NewsView: UIViewController, NewsViewInterface {
 
 	func reloadList() {
 
+	}
+
+	func setBanner(with notice: Novelty) {
+
+		self.banner.setBanner(with: notice)
 	}
 }
