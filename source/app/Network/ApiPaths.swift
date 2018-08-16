@@ -11,7 +11,6 @@ import Foundation
 protocol ApiPathsInterface {
 
 	var urlNoveltyList: URL { get }
-	var urlNovely: URL { get }
 }
 
 class ApiPaths: ApiPathsInterface {
