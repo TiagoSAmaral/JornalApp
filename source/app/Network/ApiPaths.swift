@@ -24,7 +24,7 @@ class ApiPaths: ApiPathsInterface {
 		case .debug:
 			self.urlBase = "http://localhost:3001"
 		case .release:
-			self.urlBase = " https://raw.githubusercontent.com"
+			self.urlBase = "https://raw.githubusercontent.com"
 		}
 	}
 
