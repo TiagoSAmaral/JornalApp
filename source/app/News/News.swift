@@ -59,6 +59,7 @@ class News: NewsInterface {
 
 		self.novelties = noveltys
 		self.sizeList = self.novelties.count
+		self.view.setBanner(with: self.novelties.first!)
 		self.view.reloadList()
 	}
 }
