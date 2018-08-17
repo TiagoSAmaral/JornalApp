@@ -16,6 +16,7 @@ enum Colors {
 	case text
 	case dark
 	case transparent
+	case dateTime
 
 	var value: UIColor {
 
@@ -32,6 +33,8 @@ enum Colors {
 			return UIColor(red: 160.0/255.0, green: 180.0/255.0, blue: 191.0/255.0, alpha: 1.0)
 		case .text:
 			return UIColor(red: 25.0/255.0, green: 51.0/255.0, blue: 75.0/255.0, alpha: 1.0)
+		case .dateTime:
+			return UIColor(red: 160.0/255.0, green: 180.0/255.0, blue: 191.0/255.0, alpha: 1.0)
 		}
 	}
 }
