@@ -36,12 +36,16 @@ extension NewsTableView: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		return self.presenter.buildCell(at: indexPath, inTo: tableView)
 	}
-
 }
 
 extension NewsTableView: UITableViewDelegate {
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		tableView.deselectRow(at: indexPath, animated: true)
 		self.presenter!.selectCell(at: indexPath.row)
+	}
+
+	func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+
+		(cell as! NoveltyCell).willRemoveCell()
 	}
 }
