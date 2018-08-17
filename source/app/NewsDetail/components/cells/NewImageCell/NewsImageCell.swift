@@ -44,8 +44,4 @@ class NewsImageCell: UITableViewCell, NewsCellProtocol {
 		self.subTitle.textColor = Colors.secondary.value
 		self.imageMain.layer.addSublayer(self.addGradientShadow(with: self.imageMain, height: 0.5)!)
 	}
-
-	func willRemoveCell() {
-		self.imageMain.kf.cancelDownloadTask()
-	}
 }
