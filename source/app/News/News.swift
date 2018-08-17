@@ -26,6 +26,7 @@ class News: NewsInterface {
 	init(view: NewsViewInterface, router: RouterInterface) {
 		self.view = view
 		self.router = router
+		self.view!.setNavigationTitleView(with: "O GLOBO")
 	}
 
 	func viewDidAppear() {
