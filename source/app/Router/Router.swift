@@ -32,7 +32,11 @@ class Router: RouterInterface {
 			self.view?.setViewControllers([viewInstance], animated: false)
 
 		case .noticedetail:
-			print("detail")
+
+			let viewInstance: NewsDetailView = self.buildView(NewsDetailView.identifier, NewsDetailView.identifier, NewsDetailView.self)
+			viewInstance.presenter = NewsDetail(view: viewInstance, router: self, data: data as! Novelty)
+			self.view?.pushViewController(viewInstance, animated: true)
+
 		}
 	}
 
