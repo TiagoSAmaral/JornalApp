@@ -57,6 +57,12 @@ class NewsDetail: NewsDetailInterface{
 			}
 		}
 
+		if let images = self.novelty.imagens {
+			if !images.isEmpty {
+				cells.append(.image)
+			}
+		}
+
 		self.sizeList = cells.count
 		return cells
 	}
@@ -67,23 +73,22 @@ class NewsDetail: NewsDetailInterface{
 
 		for scheme in schemes {
 
+			let cell: NewsCellProtocol!
+
 			switch scheme {
 
 			case .title:
-				let cell = tableView.dequeueReusableCell(withIdentifier: NewsTitleCell.identifier) as! NewsTitleCell
-				cell.setCell(info: self.novelty)
-				cellTemp.append(cell)
-
+				cell = tableView.dequeueReusableCell(withIdentifier: NewsTitleCell.identifier) as! NewsTitleCell
 			case .subtitle:
-				let cell = tableView.dequeueReusableCell(withIdentifier: NewsSubTitleCell.identifier) as! NewsSubTitleCell
-				cell.setCell(info: self.novelty)
-				cellTemp.append(cell)
-
+				cell = tableView.dequeueReusableCell(withIdentifier: NewsSubTitleCell.identifier) as! NewsSubTitleCell
 			case .info:
-				let cell = tableView.dequeueReusableCell(withIdentifier: NewsInfoCell.identifier) as! NewsInfoCell
-				cell.setCell(info: self.novelty)
-				cellTemp.append(cell)
+				cell = tableView.dequeueReusableCell(withIdentifier: NewsInfoCell.identifier) as! NewsInfoCell
+			case .image:
+				cell = tableView.dequeueReusableCell(withIdentifier: NewsImageCell.identifier) as! NewsImageCell
 			}
+
+			cell.setCell(info: self.novelty)
+			cellTemp.append(cell as! UITableViewCell)
 		}
 
 		return cellTemp
@@ -91,6 +96,6 @@ class NewsDetail: NewsDetailInterface{
 
 	enum MapNovelyBody: Int {
 
-		case title = 0, subtitle, info
+		case title = 0, subtitle, info, image
 	}
 }
