@@ -21,6 +21,9 @@
 		F1CC04BC21272B01002F50AE /* NewsCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC04BB21272B01002F50AE /* NewsCellProtocol.swift */; };
 		F1CC04C021274305002F50AE /* NewsSubTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC04BE21274305002F50AE /* NewsSubTitleCell.swift */; };
 		F1CC04C121274305002F50AE /* NewsSubTitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CC04BF21274305002F50AE /* NewsSubTitleCell.xib */; };
+		F1CC04C4212754C8002F50AE /* NewsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC04C2212754C8002F50AE /* NewsInfoCell.swift */; };
+		F1CC04C5212754C8002F50AE /* NewsInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CC04C3212754C8002F50AE /* NewsInfoCell.xib */; };
+		F1CC04C721275641002F50AE /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC04C621275641002F50AE /* StringExtensions.swift */; };
 		F1D9A9CD21234D3000927706 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1D9A9BF21234D3000927706 /* LaunchScreen.storyboard */; };
 		F1D9A9CE21234D3000927706 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D9A9C221234D3000927706 /* AppDelegate.swift */; };
 		F1D9A9D021234D3000927706 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1D9A9C521234D3000927706 /* Assets.xcassets */; };
@@ -78,6 +81,9 @@
 		F1CC04BB21272B01002F50AE /* NewsCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellProtocol.swift; sourceTree = "<group>"; };
 		F1CC04BE21274305002F50AE /* NewsSubTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsSubTitleCell.swift; sourceTree = "<group>"; };
 		F1CC04BF21274305002F50AE /* NewsSubTitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsSubTitleCell.xib; sourceTree = "<group>"; };
+		F1CC04C2212754C8002F50AE /* NewsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsInfoCell.swift; sourceTree = "<group>"; };
+		F1CC04C3212754C8002F50AE /* NewsInfoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsInfoCell.xib; sourceTree = "<group>"; };
+		F1CC04C621275641002F50AE /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		F1D9A9C021234D3000927706 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1D9A9C221234D3000927706 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1D9A9C321234D3000927706 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -192,6 +198,8 @@
 		F1C835B921265CE10007026B /* NewsInfoCell */ = {
 			isa = PBXGroup;
 			children = (
+				F1CC04C2212754C8002F50AE /* NewsInfoCell.swift */,
+				F1CC04C3212754C8002F50AE /* NewsInfoCell.xib */,
 			);
 			path = NewsInfoCell;
 			sourceTree = "<group>";
@@ -336,6 +344,7 @@
 				F1D9AA1B2124579500927706 /* UIViewControllerExtensions.swift */,
 				F18D76132124D1AD00834A85 /* UIView+Gradient.swift */,
 				F1C835AD2126302B0007026B /* Colors.swift */,
+				F1CC04C621275641002F50AE /* StringExtensions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -505,6 +514,7 @@
 			files = (
 				F1D9A9D021234D3000927706 /* Assets.xcassets in Resources */,
 				F18D761F2125009600834A85 /* NoveltyCell.xib in Resources */,
+				F1CC04C5212754C8002F50AE /* NewsInfoCell.xib in Resources */,
 				F1D9A9CD21234D3000927706 /* LaunchScreen.storyboard in Resources */,
 				F1CC04BA21272A6E002F50AE /* NewsTitleCell.xib in Resources */,
 				F1D9A9DA212356E700927706 /* NewsView.storyboard in Resources */,
@@ -602,6 +612,8 @@
 				F18D761E2125009600834A85 /* NoveltyCell.swift in Sources */,
 				F1C835B121265C390007026B /* NewsDetailView.swift in Sources */,
 				F1D9A9CE21234D3000927706 /* AppDelegate.swift in Sources */,
+				F1CC04C721275641002F50AE /* StringExtensions.swift in Sources */,
+				F1CC04C4212754C8002F50AE /* NewsInfoCell.swift in Sources */,
 				F1D9AA1A21244D3F00927706 /* ApiPaths.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
