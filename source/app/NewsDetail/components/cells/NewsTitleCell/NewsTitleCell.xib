@@ -19,16 +19,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kV-1S-t64">
-                        <rect key="frame" x="16" y="16" width="288" height="92"/>
+                        <rect key="frame" x="0.0" y="16" width="320" height="109"/>
                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="3kV-1S-t64" secondAttribute="bottom" constant="16" id="QYC-Vi-SQI"/>
-                    <constraint firstAttribute="trailing" secondItem="3kV-1S-t64" secondAttribute="trailing" constant="16" id="RKR-Ps-f5P"/>
-                    <constraint firstItem="3kV-1S-t64" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dZ9-sv-BJV"/>
+                    <constraint firstAttribute="bottom" secondItem="3kV-1S-t64" secondAttribute="bottom" constant="-0.5" id="QYC-Vi-SQI"/>
+                    <constraint firstAttribute="trailing" secondItem="3kV-1S-t64" secondAttribute="trailing" id="RKR-Ps-f5P"/>
+                    <constraint firstItem="3kV-1S-t64" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dZ9-sv-BJV"/>
                     <constraint firstItem="3kV-1S-t64" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="lpG-lU-dJW"/>
                 </constraints>
             </tableViewCellContentView>
