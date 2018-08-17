@@ -41,7 +41,7 @@
                             <constraint firstAttribute="height" constant="21" id="M19-fk-FuW"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="13"/>
-                        <color key="textColor" red="0.63656997680664062" green="0.71095424890518188" blue="0.74425333738327026" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.6287270188331604" green="0.70621120929718018" blue="0.74935168027877808" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
