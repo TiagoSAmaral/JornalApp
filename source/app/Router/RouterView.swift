@@ -37,5 +37,7 @@ class RouterView: UINavigationController, RouterViewInterface {
 		self.navigationBar.barStyle = .black
 		self.navigationBar.barTintColor = Colors.primary.value
 		self.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Arial Rounded MT Bold", size: 22)!]
+		self.navigationBar.tintColor = .white
+
 	}
 }

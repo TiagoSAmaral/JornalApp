@@ -37,9 +37,13 @@ struct ObjectJson: Codable {
 			return nil
 		}
 
+		guard let jsonArray = validJson.array else {
+			return nil
+		}
+
 		var objectsJson: [ObjectJson] = [ObjectJson]()
 
-		for object in validJson.array! {
+		for object in jsonArray {
 
 			if let validObj = ObjectJson(json: object) {
 				objectsJson.append(validObj)
