@@ -30,11 +30,11 @@ class NoveltyCell: UITableViewCell {
 
 	func setupCell(with novelty: Novelty) {
 
-		self.sectionName.text = novelty.secao?.nome
+		self.sectionName.text = novelty.secao?.nome?.uppercased()
 		self.subtitle.text = novelty.subTitulo != nil ? novelty.subTitulo : novelty.titulo
 
 		self.photo.image = defaultCoder
-		
+
 		if !novelty.imagens!.isEmpty {
 			self.photo.kf.setImage(with: novelty.imagens?[0].sourceUrl)
 		}
