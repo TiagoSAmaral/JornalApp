@@ -14,7 +14,7 @@ class Banner: UIView {
 	@IBOutlet var photo: UIImageView!
 	@IBOutlet var title: UILabel!
 	@IBOutlet var section: UILabel!
-	private var defaultCoder: UIImage = UIImage(named: "cover-news")!
+	var defaultCoder: UIImage = UIImage(named: "cover-news")!
 
 	override func draw(_ rect: CGRect) {
 		// Drawing code
