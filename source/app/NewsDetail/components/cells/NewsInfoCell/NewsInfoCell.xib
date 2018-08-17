@@ -20,22 +20,30 @@
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esk-CT-POv">
                         <rect key="frame" x="145" y="3" width="31" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14.5" id="Zyo-gk-ruy"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ul0-FM-pmF">
                         <rect key="frame" x="144" y="24" width="33" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="HOg-qu-FNl"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="esk-CT-POv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="LUX-uH-5yd"/>
-                    <constraint firstItem="Ul0-FM-pmF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="mtw-Ua-Rhp"/>
-                    <constraint firstItem="esk-CT-POv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-11.75" id="n6W-ga-M5p"/>
-                    <constraint firstItem="Ul0-FM-pmF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="10.25" id="xkd-XM-vfg"/>
+                    <constraint firstItem="Ul0-FM-pmF" firstAttribute="top" secondItem="esk-CT-POv" secondAttribute="bottom" constant="6.5" id="8aH-8T-zb5"/>
+                    <constraint firstItem="Ul0-FM-pmF" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="F0h-5r-LhK"/>
+                    <constraint firstItem="esk-CT-POv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="Mrh-TI-pkU"/>
+                    <constraint firstAttribute="bottom" secondItem="Ul0-FM-pmF" secondAttribute="bottom" constant="3.5" id="WzG-pM-YZS"/>
+                    <constraint firstItem="esk-CT-POv" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="i7j-wQ-ChY"/>
+                    <constraint firstItem="Ul0-FM-pmF" firstAttribute="top" secondItem="esk-CT-POv" secondAttribute="bottom" constant="6.5" id="su7-89-05O"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
