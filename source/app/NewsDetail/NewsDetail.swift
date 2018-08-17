@@ -51,6 +51,12 @@ class NewsDetail: NewsDetailInterface{
 			cells.append(.subtitle)
 		}
 
+		if let authors = self.novelty.autores {
+			if self.novelty.atualizadoEm != nil && !authors.isEmpty {
+				cells.append(.info)
+			}
+		}
+
 		self.sizeList = cells.count
 		return cells
 	}
@@ -72,8 +78,12 @@ class NewsDetail: NewsDetailInterface{
 				let cell = tableView.dequeueReusableCell(withIdentifier: NewsSubTitleCell.identifier) as! NewsSubTitleCell
 				cell.setCell(info: self.novelty)
 				cellTemp.append(cell)
-			}
 
+			case .info:
+				let cell = tableView.dequeueReusableCell(withIdentifier: NewsInfoCell.identifier) as! NewsInfoCell
+				cell.setCell(info: self.novelty)
+				cellTemp.append(cell)
+			}
 		}
 
 		return cellTemp
@@ -81,6 +91,6 @@ class NewsDetail: NewsDetailInterface{
 
 	enum MapNovelyBody: Int {
 
-		case title = 0, subtitle
+		case title = 0, subtitle, info
 	}
 }
