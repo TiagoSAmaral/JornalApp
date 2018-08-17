@@ -25,7 +25,7 @@ extension UIView {
 								width: view.frame.size.width,
 								height: heightShadow)
 
-		gradient.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+		gradient.colors = [Colors.transparent.value.cgColor, Colors.dark.value.cgColor]
 
 		return gradient
 	}
