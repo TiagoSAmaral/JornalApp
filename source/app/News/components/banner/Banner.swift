@@ -14,14 +14,14 @@ class Banner: UIView {
 	@IBOutlet var photo: UIImageView!
 	@IBOutlet var title: UILabel!
 	@IBOutlet var section: UILabel!
-	private var defaultCoder: UIImage = UIImage(named: "cover-banner")!
+	private var defaultCoder: UIImage = UIImage(named: "cover-news")!
 
 	override func draw(_ rect: CGRect) {
 		// Drawing code
 
 		self.section.isHidden = true
-		self.setupView(of: self.section, fontName: "Arial Rounded MT Bold", size: 14.0, colorFont: .white, fitContent: true, alignment: .center, backgroundColor: .black)
-		self.setupView(of: self.title, fontName: "Arial Rounded MT Bold", size: 16.0, colorFont: .white, fitContent: false, alignment: .center, backgroundColor: .clear)
+		self.setupView(of: self.section, fontName: "Arial Rounded MT Bold", size: 14.0, colorFont: Colors.secondary.value, fitContent: true, alignment: .center, backgroundColor: Colors.dark.value)
+		self.setupView(of: self.title, fontName: "Arial Rounded MT Bold", size: 16.0, colorFont: Colors.secondary.value, fitContent: false, alignment: .center, backgroundColor: Colors.transparent.value)
 		self.photo.layer.addSublayer(self.addGradientShadow(with: self.photo, height: 0.5)!)
 	}
 
