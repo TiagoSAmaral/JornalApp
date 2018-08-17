@@ -10,6 +10,7 @@ import UIKit
 
 protocol NewsDetailViewInterface: class {
 
+	var tableView: UITableView! { get }
 }
 
 class NewsDetailView: UITableViewController, NewsDetailViewInterface {
@@ -25,6 +26,7 @@ class NewsDetailView: UITableViewController, NewsDetailViewInterface {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 
+		self.tableView.separatorStyle = .none
 		self.registerCell()
     }
 
@@ -36,6 +38,7 @@ class NewsDetailView: UITableViewController, NewsDetailViewInterface {
 	func registerCell(){
 
 		self.tableView.register(UINib(nibName: NewsTitleCell.identifier, bundle: nil), forCellReuseIdentifier: NewsTitleCell.identifier)
+		self.tableView.register(UINib(nibName: NewsSubTitleCell.identifier, bundle: nil), forCellReuseIdentifier: NewsSubTitleCell.identifier)
 	}
 
     // MARK: - Table view data source
