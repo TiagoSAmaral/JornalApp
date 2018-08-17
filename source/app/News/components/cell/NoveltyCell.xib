@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoveltyCell" rowHeight="60" id="KGk-i7-Jjw" customClass="NoveltyCell" customModule="jornalapp" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoveltyCell" rowHeight="85" id="KGk-i7-Jjw" customClass="NoveltyCell" customModule="jornalapp" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="86"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -22,12 +22,12 @@
                         <rect key="frame" x="7" y="7" width="100" height="71"/>
                         <color key="tintColor" red="0.25490196079999999" green="0.44738298650000002" blue="0.66586393119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="IQu-uP-bIq"/>
-                            <constraint firstAttribute="height" constant="71" id="PA4-LC-C1C"/>
+                            <constraint firstAttribute="height" constant="71" id="76f-f7-6JU"/>
+                            <constraint firstAttribute="width" constant="100" id="EeP-YO-MVG"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWj-FA-Xqu">
-                        <rect key="frame" x="115" y="31" width="195" height="47"/>
+                        <rect key="frame" x="117" y="31" width="193" height="47"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="47" id="dtG-Cu-Bia"/>
                         </constraints>
@@ -36,7 +36,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOCIEDADE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRq-1R-IES">
-                        <rect key="frame" x="115" y="7" width="195" height="21"/>
+                        <rect key="frame" x="117" y="7" width="193" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="M19-fk-FuW"/>
                         </constraints>
@@ -46,15 +46,15 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Ncl-Id-nXC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="2Fm-tf-rMp"/>
-                    <constraint firstAttribute="bottom" secondItem="Ncl-Id-nXC" secondAttribute="bottom" constant="7" id="4JM-Sv-JcZ"/>
+                    <constraint firstItem="Ncl-Id-nXC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="3Cq-4j-xd5"/>
+                    <constraint firstItem="Ncl-Id-nXC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3IJ-FU-1P2"/>
                     <constraint firstAttribute="trailing" secondItem="aRq-1R-IES" secondAttribute="trailing" constant="10" id="9rc-dT-F6J"/>
+                    <constraint firstItem="aRq-1R-IES" firstAttribute="leading" secondItem="Ncl-Id-nXC" secondAttribute="trailing" constant="10" id="I1o-Bi-xsH"/>
                     <constraint firstAttribute="trailing" secondItem="kWj-FA-Xqu" secondAttribute="trailing" constant="10" id="Jec-0b-VSy"/>
-                    <constraint firstItem="kWj-FA-Xqu" firstAttribute="leading" secondItem="Ncl-Id-nXC" secondAttribute="trailing" constant="8" id="Re4-rZ-Mh7"/>
+                    <constraint firstItem="kWj-FA-Xqu" firstAttribute="leading" secondItem="Ncl-Id-nXC" secondAttribute="trailing" constant="10" id="QJk-W1-a1H"/>
                     <constraint firstItem="kWj-FA-Xqu" firstAttribute="top" secondItem="aRq-1R-IES" secondAttribute="bottom" constant="3" id="Yx6-mI-7DB"/>
+                    <constraint firstItem="Ncl-Id-nXC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" priority="999" constant="7" id="d1h-me-Yzy"/>
                     <constraint firstItem="aRq-1R-IES" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="eIQ-Tp-I8N"/>
-                    <constraint firstItem="Ncl-Id-nXC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="fUQ-QH-CN1"/>
-                    <constraint firstItem="aRq-1R-IES" firstAttribute="leading" secondItem="Ncl-Id-nXC" secondAttribute="trailing" constant="8" id="lVp-CA-glX"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
