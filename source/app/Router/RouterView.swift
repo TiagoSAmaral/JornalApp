@@ -33,6 +33,9 @@ class RouterView: UINavigationController, RouterViewInterface {
 	func setupApperance() {
 
 		self.navigationBar.isTranslucent = false
-
+		self.navigationBar.setValue(true, forKey: "hidesShadow")
+		self.navigationBar.barStyle = .black
+		self.navigationBar.barTintColor = Colors.primary.value
+		self.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Arial Rounded MT Bold", size: 22)!]
 	}
 }
