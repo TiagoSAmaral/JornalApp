@@ -41,6 +41,7 @@ class NewsDetailView: UITableViewController, NewsDetailViewInterface {
 		self.tableView.register(UINib(nibName: NewsSubTitleCell.identifier, bundle: nil), forCellReuseIdentifier: NewsSubTitleCell.identifier)
 		self.tableView.register(UINib(nibName: NewsInfoCell.identifier, bundle: nil), forCellReuseIdentifier: NewsInfoCell.identifier)
 		self.tableView.register(UINib(nibName: NewsImageCell.identifier, bundle: nil), forCellReuseIdentifier: NewsImageCell.identifier)
+		self.tableView.register(UINib(nibName: NewsTextCell.identifier, bundle: nil), forCellReuseIdentifier: NewsTextCell.identifier)
 	}
 
     // MARK: - Table view data source

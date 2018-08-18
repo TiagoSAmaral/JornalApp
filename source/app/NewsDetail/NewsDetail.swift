@@ -63,6 +63,10 @@ class NewsDetail: NewsDetailInterface{
 			}
 		}
 
+		if self.novelty.texto != nil {
+			cells.append(.text)
+		}
+
 		self.sizeList = cells.count
 		return cells
 	}
@@ -85,6 +89,8 @@ class NewsDetail: NewsDetailInterface{
 				cell = tableView.dequeueReusableCell(withIdentifier: NewsInfoCell.identifier) as! NewsInfoCell
 			case .image:
 				cell = tableView.dequeueReusableCell(withIdentifier: NewsImageCell.identifier) as! NewsImageCell
+			case .text:
+				cell = tableView.dequeueReusableCell(withIdentifier: NewsTextCell.identifier) as! NewsTextCell
 			}
 
 			cell.setCell(info: self.novelty)
@@ -94,8 +100,8 @@ class NewsDetail: NewsDetailInterface{
 		return cellTemp
 	}
 
-	enum MapNovelyBody: Int {
+	enum MapNovelyBody {
 
-		case title = 0, subtitle, info, image
+		case title, subtitle, info, image, text
 	}
 }
