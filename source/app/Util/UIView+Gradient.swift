@@ -9,20 +9,21 @@
 import UIKit
 
 extension UIView {
+//CGFloat
+	func addGradientShadow( with view: UIView, height: CGFloat, percent heightShadownPercent: CGFloat) -> CAGradientLayer? {
 
-	func addGradientShadow( with view: UIView, height percent: CGFloat) -> CAGradientLayer? {
-
-		if percent < 0.0 || percent > 1.0 {
+		if heightShadownPercent < 0.0 || heightShadownPercent > 1.0 {
 			return nil
 		}
 
-		let heightShadow = view.frame.size.height * percent
-		let positionY = view.frame.size.height - heightShadow
+		let heightShadow = height * heightShadownPercent
+//		let positionY = view.frame.size.height - heightShadow
+		let positionY = height - heightShadow
 
 		let gradient = CAGradientLayer()
 		gradient.frame = CGRect(x: view.frame.origin.x,
 								y: positionY ,
-								width: view.frame.size.width,
+								width: UIScreen.main.bounds.width, //view.frame.size.width,
 								height: heightShadow)
 
 		gradient.colors = [Colors.transparent.value.cgColor, Colors.dark.value.cgColor]
