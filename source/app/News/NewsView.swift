@@ -12,7 +12,7 @@ protocol NewsViewInterface: class {
 
 	func reloadList()
 	func showAlert(with title: String, and message: String, completion: (() -> Void)?)
-	func setBanner(with notice: Novelty)
+	func setBanner(with notice: Novelty, index: Int)
 	func setNavigationTitleView(with text: String)
 }
 
@@ -27,6 +27,8 @@ class NewsView: UIViewController, NewsViewInterface {
 
         // Do any additional setup after loading the view.
 		self.listNews.presenter = self.presenter
+		self.banner.presenter = self.presenter
+
 		self.setBackButtonTitle(with: "")
 		self.listNews.isHidden = true
     }
@@ -34,7 +36,6 @@ class NewsView: UIViewController, NewsViewInterface {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
-		
 		self.presenter.viewDidAppear()
 	}
 
@@ -48,7 +49,7 @@ class NewsView: UIViewController, NewsViewInterface {
 		self.navigationItem.title = text
 	}
 
-	func setBanner(with notice: Novelty) {
-		self.banner.setBanner(with: notice)
+	func setBanner(with notice: Novelty, index: Int) {
+		self.banner.setBanner(with: notice, index: index)
 	}
 }
