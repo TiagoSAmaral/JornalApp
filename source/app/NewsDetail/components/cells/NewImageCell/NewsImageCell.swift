@@ -39,9 +39,9 @@ class NewsImageCell: UITableViewCell, NewsCellProtocol {
 			}
 		}
 
-		self.subTitle.text = info.imagens![0].legenda
+		self.subTitle.text = info.imagens![0].caption
 		self.subTitle.text?.append(" ")
-		self.subTitle.text?.append(info.imagens![0].fonte!)
+		self.subTitle.text?.append(info.imagens![0].source!)
 	}
 
 	func setApperanceOfCell() {

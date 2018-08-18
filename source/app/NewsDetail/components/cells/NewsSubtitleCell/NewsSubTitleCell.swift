@@ -25,7 +25,7 @@ class NewsSubTitleCell: UITableViewCell, NewsCellProtocol {
 
 	func setCell(info: Novelty) {
 
-		if let valitText = info.subTitulo {
+		if let valitText = info.subtitle {
 			subtitleLabel.text = valitText
 		} else {
 

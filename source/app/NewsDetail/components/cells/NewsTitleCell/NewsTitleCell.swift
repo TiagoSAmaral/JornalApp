@@ -23,6 +23,6 @@ class NewsTitleCell: UITableViewCell, NewsCellProtocol {
     }
 
 	func setCell(info: Novelty) {
-		self.titleLabel.text = info.titulo?.uppercased()
+		self.titleLabel.text = info.title?.uppercased()
 	}
 }

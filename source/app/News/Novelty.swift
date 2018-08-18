@@ -56,17 +56,17 @@ struct ObjectJson: Codable {
 
 struct Novelty: Codable {
 
-	let autores: [String]?
-	let informePublicitario: Bool?
-	let subTitulo: String?
-	let texto: String?
+	let authors: [String]?
+	let advertising: Bool?
+	let subtitle: String?
+	let text: String?
 	let videos: [String]?
-	let atualizadoEm: String?
+	let updatedAt: String?
 	let identifier: Int?
-	let publicadoEm: String?
-	let secao: Section?
-	let tipo: String?
-	let titulo: String?
+	let publishedIn: String?
+	let section: Section?
+	let type: String?
+	let title: String?
 	let mobileUrl: URL?
 	let urlOriginal: URL?
 	let imagens: [Image]?
@@ -78,9 +78,9 @@ struct Novelty: Codable {
 			for author in jsonArrayAuthors {
 				newAuthors.append(author.string!)
 			}
-			self.autores = newAuthors
+			self.authors = newAuthors
 		} else {
-			self.autores = nil
+			self.authors = nil
 		}
 
 		if let jsonArrayViewdos = json[JsonProperty.videos.rawValue].array {
@@ -93,18 +93,18 @@ struct Novelty: Codable {
 			self.videos = nil
 		}
 
-		self.informePublicitario = json[JsonProperty.advertising.rawValue].bool
-		self.subTitulo = json[JsonProperty.caption.rawValue].string
-		self.texto = json[JsonProperty.text.rawValue].string
-		self.atualizadoEm = json[JsonProperty.updatedAt.rawValue].string
+		self.advertising = json[JsonProperty.advertising.rawValue].bool
+		self.subtitle = json[JsonProperty.subtitle.rawValue].string
+		self.text = json[JsonProperty.text.rawValue].string
+		self.updatedAt = json[JsonProperty.updatedAt.rawValue].string
 		self.identifier = json[JsonProperty.identifier.rawValue].int
-		self.publicadoEm = json[JsonProperty.publishedIn.rawValue].string
-		self.tipo = json[JsonProperty.type.rawValue].string
-		self.titulo = json[JsonProperty.title.rawValue].string
+		self.publishedIn = json[JsonProperty.publishedIn.rawValue].string
+		self.type = json[JsonProperty.type.rawValue].string
+		self.title = json[JsonProperty.title.rawValue].string
 		self.mobileUrl = URL(string: json[JsonProperty.stringUrl.rawValue].string!)
 		self.urlOriginal = URL(string: json[JsonProperty.urlOriginal.rawValue].string!)
 
-		self.secao = Section(json: json[JsonProperty.section.rawValue])
+		self.section = Section(json: json[JsonProperty.section.rawValue])
 		self.imagens = Image.generatyMany(json: json[JsonProperty.imagens.rawValue])
 	}
 
@@ -120,26 +120,26 @@ struct Novelty: Codable {
 
 struct Section: Codable {
 
-	let nome: String?
+	let name: String?
 	let sectionUrl: URL?
 
 	init(json: JSON) {
-		self.nome = json[JsonProperty.name.rawValue].string
+		self.name = json[JsonProperty.name.rawValue].string
 		self.sectionUrl = URL(string: json[JsonProperty.stringUrl.rawValue].string!)
 	}
 }
 
 struct Image: Codable {
 
-	let autor: String?
-	let fonte: String?
-	let legenda: String?
+	let author: String?
+	let source: String?
+	let caption: String?
 	let sourceUrl: URL?
 
 	init(json: JSON) {
-		self.autor = json[JsonProperty.author.rawValue].string
-		self.fonte = json[JsonProperty.source.rawValue].string
-		self.legenda = json[JsonProperty.subtitle.rawValue].string
+		self.author = json[JsonProperty.author.rawValue].string
+		self.source = json[JsonProperty.source.rawValue].string
+		self.caption = json[JsonProperty.subtitle.rawValue].string
 		self.sourceUrl = URL(string: json[JsonProperty.stringUrl.rawValue].string!)
 	}
 
@@ -159,7 +159,7 @@ struct Image: Codable {
 enum JsonProperty: String {
 	case authors = "autores"
 	case advertising = "informePublicitario"
-	case caption = "subTitulo"
+	case subtitle = "subTitulo"
 	case text = "texto"
 	case videos = "videos"
 	case updatedAt = "atualizadoEm"
@@ -174,7 +174,7 @@ enum JsonProperty: String {
 	case imagens = "imagens"
 	case author = "autor"
 	case source = "fonte"
-	case subtitle = "legenda"
+	case caption = "legenda"
 	case product = "produto"
 	case contents = "conteudos"
 }

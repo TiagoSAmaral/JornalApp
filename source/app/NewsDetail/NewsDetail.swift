@@ -30,7 +30,7 @@ class NewsDetail: NewsDetailInterface{
 		self.router = router
 		self.novelty = data
 
-		self.view!.setNavigationTitleView(with: self.novelty.secao!.nome!)
+		self.view!.setNavigationTitleView(with: self.novelty.section!.name!)
 		tableScheme = self.buildSchemsTableView(notice: self.novelty)
 		self.cells = self.buildCells(with: tableScheme, tableView: self.view.tableView)
 		self.sizeList = tableScheme.count
@@ -45,16 +45,16 @@ class NewsDetail: NewsDetailInterface{
 
 		var cells: [MapNovelyBody] = [MapNovelyBody]()
 
-		if self.novelty.titulo != nil {
+		if self.novelty.title != nil {
 			cells.append(.title)
 		}
 
-		if self.novelty.subTitulo != nil {
+		if self.novelty.subtitle != nil {
 			cells.append(.subtitle)
 		}
 
-		if let authors = self.novelty.autores {
-			if self.novelty.atualizadoEm != nil && !authors.isEmpty {
+		if let authors = self.novelty.authors {
+			if self.novelty.updatedAt != nil && !authors.isEmpty {
 				cells.append(.info)
 			}
 		}
@@ -65,7 +65,7 @@ class NewsDetail: NewsDetailInterface{
 			}
 		}
 
-		if self.novelty.texto != nil {
+		if self.novelty.text != nil {
 			cells.append(.text)
 		}
 

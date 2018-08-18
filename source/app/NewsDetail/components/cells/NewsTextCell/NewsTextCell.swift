@@ -24,6 +24,6 @@ class NewsTextCell: UITableViewCell, NewsCellProtocol {
     }
 
 	func setCell(info: Novelty) {
-		self.textContent.text = info.texto
+		self.textContent.text = info.text
 	}
 }

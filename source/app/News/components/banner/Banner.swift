@@ -32,8 +32,8 @@ class Banner: UIView {
 
 		self.indexNotice = index
 		self.photo.kf.setImage(with: notice.imagens![0].sourceUrl!, placeholder: defaultCoder)
-		self.section.text = notice.secao!.nome!
-		self.title.text = notice.titulo
+		self.section.text = notice.section!.name!
+		self.title.text = notice.title
 		self.section.isHidden = false
 
 		self.sectionAction(view: self.section)

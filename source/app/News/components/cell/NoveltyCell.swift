@@ -30,8 +30,8 @@ class NoveltyCell: UITableViewCell {
 
 	func setupCell(with novelty: Novelty) {
 
-		self.sectionName.text = novelty.secao?.nome?.uppercased()
-		self.subtitle.text = novelty.subTitulo != nil ? novelty.subTitulo : novelty.titulo
+		self.sectionName.text = novelty.section?.name?.uppercased()
+		self.subtitle.text = novelty.subtitle != nil ? novelty.subtitle : novelty.title
 
 		self.photo.image = defaultCoder
 
