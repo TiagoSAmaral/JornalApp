@@ -74,6 +74,8 @@ class News: NewsInterface {
 	}
 
 	func selectCell(at index: Int) {
-		self.router.goTo(destiny: .noticedetail, pushfoward: self.novelties[index])
+
+		let destiny = self.novelties[index].tipo == "materia" ? Routes.noticedetail: Routes.externallink
+		self.router.goTo(destiny: destiny, pushfoward: self.novelties[index])
 	}
 }

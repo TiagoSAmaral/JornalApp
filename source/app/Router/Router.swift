@@ -37,6 +37,12 @@ class Router: RouterInterface {
 			viewInstance.presenter = NewsDetail(view: viewInstance, router: self, data: data as! Novelty)
 			self.view?.pushViewController(viewInstance, animated: true)
 
+		case .externallink:
+
+			guard let notice = data as? Novelty else {
+				return
+			}
+			UIApplication.shared.openURL(notice.mobileUrl!)
 		}
 	}
 

@@ -12,4 +12,5 @@ enum Routes {
 
 	case notices
 	case noticedetail
+	case externallink
 }
