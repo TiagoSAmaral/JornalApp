@@ -22,9 +22,9 @@ class Banner: UIView {
 		self.section.isHidden = true
 		self.setupView(of: self.section, fontName: "Arial Rounded MT Bold", size: 14.0, colorFont: Colors.secondary.value, fitContent: true, alignment: .center, backgroundColor: Colors.dark.value)
 		self.setupView(of: self.title, fontName: "Arial Rounded MT Bold", size: 16.0, colorFont: Colors.secondary.value, fitContent: false, alignment: .center, backgroundColor: Colors.transparent.value)
-		self.photo.layer.addSublayer(self.addGradientShadow(with: self.photo, height: 0.5)!)
+		self.photo.layer.addSublayer(self.addGradientShadow(with: self.photo, height: self.bounds.height, percent: 0.5)!)
 	}
-
+// self.photo.image!.size.height
 	func setBanner(with notice: Novelty) {
 
 		self.photo.kf.setImage(with: notice.imagens![0].sourceUrl!, placeholder: defaultCoder)
