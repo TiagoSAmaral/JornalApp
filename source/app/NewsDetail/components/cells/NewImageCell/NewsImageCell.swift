@@ -32,7 +32,12 @@ class NewsImageCell: UITableViewCell, NewsCellProtocol {
 	func setCell(info: Novelty) {
 
 		self.imageMain.image = defaultCoder
-		self.imageMain.kf.setImage(with: info.imagens![0].sourceUrl)
+		self.imageMain.kf.setImage(with: info.imagens![0].sourceUrl, placeholder: nil, options: nil, progressBlock: nil) { (_, _, _, _) in
+
+			DispatchQueue.main.asyncAfter(deadline: DispatchTime(uptimeNanoseconds: UInt64(0.01))) {
+				self.imageMain.layer.addSublayer(self.addGradientShadow(with: self.imageMain, height: self.bounds.height, percent: 0.5)!)
+			}
+		}
 
 		self.subTitle.text = info.imagens![0].legenda
 		self.subTitle.text?.append(" ")
@@ -42,6 +47,5 @@ class NewsImageCell: UITableViewCell, NewsCellProtocol {
 	func setApperanceOfCell() {
 
 		self.subTitle.textColor = Colors.secondary.value
-		self.imageMain.layer.addSublayer(self.addGradientShadow(with: self.imageMain, height: 0.5)!)
 	}
 }
