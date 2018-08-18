@@ -14,17 +14,6 @@ class NewsInfoCell: UITableViewCell, NewsCellProtocol {
 	@IBOutlet weak var author: UILabel!
 	@IBOutlet weak var datetime: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 	func setCell(info: Novelty) {
 
 		var fullAuthor = "POR "
@@ -36,15 +25,15 @@ class NewsInfoCell: UITableViewCell, NewsCellProtocol {
 		attributedString.addAttribute(NSAttributedStringKey.foregroundColor, value: Colors.primary.value, range: range)
 
 		self.author.attributedText = attributedString
-		self.buildIconText(label: self.datetime, fontSize: 12.0, text: info.updatedAt!.dateOutput(to: "dd/MM/yy HH:mm"), fontName: "clocko")
+		self.datetime.text = self.buildIconText(label: self.datetime, fontSize: 12.0, text: info.updatedAt!.dateOutput(to: "dd/MM/yy HH:mm"), fontName: "clocko")
 		self.datetime.textColor = Colors.dateTime.value
 	}
 
-	func buildIconText(label: UILabel, fontSize: CGFloat, text: String, fontName: String){
+	func buildIconText(label: UILabel, fontSize: CGFloat, text: String, fontName: String) -> String{
 
 		label.font = UIFont.icon(from: .fontAwesome, ofSize: fontSize)
 		var icon = String.fontAwesomeIcon(fontName)!
 		icon.append(" \(text)")
-		label.text = icon
+		return icon
 	}
 }

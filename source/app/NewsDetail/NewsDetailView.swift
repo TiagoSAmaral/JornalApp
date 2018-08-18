@@ -37,7 +37,6 @@ class NewsDetailView: UITableViewController, NewsDetailViewInterface {
 	}
 
 	func addShareButton() {
-
 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(showShareList))
 	}
 
@@ -46,7 +45,6 @@ class NewsDetailView: UITableViewController, NewsDetailViewInterface {
 	}
 
 	func registerCell(){
-
 		self.tableView.register(UINib(nibName: NewsTitleCell.identifier, bundle: nil), forCellReuseIdentifier: NewsTitleCell.identifier)
 		self.tableView.register(UINib(nibName: NewsSubTitleCell.identifier, bundle: nil), forCellReuseIdentifier: NewsSubTitleCell.identifier)
 		self.tableView.register(UINib(nibName: NewsInfoCell.identifier, bundle: nil), forCellReuseIdentifier: NewsInfoCell.identifier)

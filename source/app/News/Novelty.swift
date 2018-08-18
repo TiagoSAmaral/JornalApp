@@ -139,7 +139,7 @@ struct Image: Codable {
 	init(json: JSON) {
 		self.author = json[JsonProperty.author.rawValue].string
 		self.source = json[JsonProperty.source.rawValue].string
-		self.caption = json[JsonProperty.subtitle.rawValue].string
+		self.caption = json[JsonProperty.caption.rawValue].string
 		self.sourceUrl = URL(string: json[JsonProperty.stringUrl.rawValue].string!)
 	}
 

@@ -17,12 +17,6 @@ class NewsTextCell: UITableViewCell, NewsCellProtocol {
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 	func setCell(info: Novelty) {
 		self.textContent.text = info.text
 	}
