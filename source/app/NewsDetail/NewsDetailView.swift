@@ -21,7 +21,9 @@ class NewsDetailView: UITableViewController, NewsDetailViewInterface {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		self.tableView.allowsSelection = false
 		self.tableView.separatorStyle = .none
+
 		self.registerCell()
 		self.addShareButton()
     }
@@ -31,7 +33,6 @@ class NewsDetailView: UITableViewController, NewsDetailViewInterface {
     }
 
 	func setNavigationTitleView(with text: String) {
-
 		self.navigationItem.title = text
 	}
 
