@@ -28,16 +28,19 @@ class NewsView: UIViewController, NewsViewInterface {
         // Do any additional setup after loading the view.
 		self.listNews.presenter = self.presenter
 		self.setBackButtonTitle(with: "")
+		self.listNews.isHidden = true
     }
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 
+		
 		self.presenter.viewDidAppear()
 	}
 
 	func reloadList() {
 		self.listNews.reloadData()
+		self.listNews.isHidden = false
 	}
 
 	func setNavigationTitleView(with text: String) {
