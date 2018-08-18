@@ -42,8 +42,7 @@ class NewsDetailView: UITableViewController, NewsDetailViewInterface {
 	}
 
 	@objc func showShareList() {
-		// Anything you want to exclude
-		self.present(self.presenter.sharedNovely(), animated: true, completion: nil)
+		self.present(self.presenter.sharedNovely(sourceView: self.navigationItem.rightBarButtonItems![0]), animated: true, completion: nil)
 	}
 
 	func registerCell(){

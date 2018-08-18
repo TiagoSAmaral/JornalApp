@@ -12,7 +12,7 @@ protocol NewsDetailInterface {
 
 	var sizeList: Int { get }
 	func setCell(at indexPath: IndexPath, on tableView: UITableView) -> UITableViewCell
-	func sharedNovely() -> UIActivityViewController
+	func sharedNovely(sourceView: UIBarButtonItem) -> UIActivityViewController
 }
 
 class NewsDetail: NewsDetailInterface{
@@ -102,25 +102,18 @@ class NewsDetail: NewsDetailInterface{
 		return cellTemp
 	}
 
-	func sharedNovely() -> UIActivityViewController {
+	func sharedNovely(sourceView: UIBarButtonItem) -> UIActivityViewController {
 
-		let firstActivityItem = (self.cells[0] as! NewsTitleCell).titleLabel.text
-		let secondActivityItem: URL = self.novelty.mobileUrl!
+		let firstItem = (self.cells[0] as! NewsTitleCell).titleLabel.text
+		let secondAItem: URL = self.novelty.mobileUrl!
 
 		let activityViewController: UIActivityViewController = UIActivityViewController(
-			activityItems: [firstActivityItem ?? "", secondActivityItem], applicationActivities: nil)
+			activityItems: [firstItem ?? "", secondAItem], applicationActivities: nil)
 
-		// This lines is for the popover you need to show in iPad
-		activityViewController.popoverPresentationController?.sourceView = UIButton()
-
-		// This line remove the arrow of the popover to show in iPad
+		activityViewController.popoverPresentationController?.barButtonItem = sourceView
 		activityViewController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.any
 		activityViewController.popoverPresentationController?.sourceRect = CGRect(x: 150, y: 150, width: 0, height: 0)
 
 		return activityViewController
-	}
-
-	enum MapNovelyBody {
-		case title, subtitle, info, image, text
 	}
 }
