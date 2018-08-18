@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsTableView: UITableView{
+class NewsTableView: UITableView {
 
 	var presenter: NewsInterface!
 
