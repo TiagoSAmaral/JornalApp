@@ -13,12 +13,6 @@ class NewsSubTitleCell: UITableViewCell, NewsCellProtocol {
 	@IBOutlet weak var subtitleLabel: UILabel!
 
 	func setCell(info: Novelty) {
-
-		if let valitText = info.subtitle {
-			subtitleLabel.text = valitText
-		} else {
-
-			self.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: self.frame.size.width, height: 0.0)
-		}
+		self.subtitleLabel.text = info.subtitle
 	}
 }

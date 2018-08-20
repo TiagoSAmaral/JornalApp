@@ -26,11 +26,7 @@ class NewsDetailView: UITableViewController, NewsDetailViewInterface {
 
 		self.registerCell()
 		self.addShareButton()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+	}
 
 	func setNavigationTitleView(with text: String) {
 		self.navigationItem.title = text

@@ -17,17 +17,6 @@ class NoveltyCell: UITableViewCell {
 
 	private var defaultCoder: UIImage = UIImage(named: "cover-news")!
 
-	override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 	func setupCell(with novelty: Novelty) {
 
 		self.sectionName.text = novelty.section?.name?.uppercased()
