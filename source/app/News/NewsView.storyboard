@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e6B-2F-X3i" userLabel="Banner" customClass="Banner" customModule="jornalapp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" restorationIdentifier="Banner" translatesAutoresizingMaskIntoConstraints="NO" id="e6B-2F-X3i" userLabel="Banner" customClass="Banner" customModule="jornalapp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="320" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover-news" translatesAutoresizingMaskIntoConstraints="NO" id="jZf-ki-StB">
@@ -70,7 +70,7 @@
                                     <outlet property="title" destination="2UD-uJ-EcE" id="lsL-E8-hud"/>
                                 </connections>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mc2-Zw-jst" customClass="NewsTableView" customModule="jornalapp" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NewsTableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mc2-Zw-jst" customClass="NewsTableView" customModule="jornalapp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="220" width="320" height="348"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>

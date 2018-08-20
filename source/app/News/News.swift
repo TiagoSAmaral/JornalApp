@@ -34,11 +34,6 @@ class News: NewsInterface {
 		self.requestNoveltyList()
 	}
 
-	func showDetailOf(selectedIndex: Int) {
-
-		self.router.goTo(destiny: .noticedetail, pushfoward: self.novelties[selectedIndex])
-	}
-
 	func requestNoveltyList() {
 
 		self.network.requestNews { (noveltyList, error) in

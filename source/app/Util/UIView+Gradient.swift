@@ -17,13 +17,12 @@ extension UIView {
 		}
 
 		let heightShadow = height * heightShadownPercent
-//		let positionY = view.frame.size.height - heightShadow
 		let positionY = height - heightShadow
 
 		let gradient = CAGradientLayer()
 		gradient.frame = CGRect(x: view.frame.origin.x,
 								y: positionY ,
-								width: UIScreen.main.bounds.width, //view.frame.size.width,
+								width: UIScreen.main.bounds.width,
 								height: heightShadow)
 
 		gradient.colors = [Colors.transparent.value.cgColor, Colors.dark.value.cgColor]

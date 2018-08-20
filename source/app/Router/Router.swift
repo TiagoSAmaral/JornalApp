@@ -27,13 +27,13 @@ class Router: RouterInterface {
 
 		case .notices:
 
-			let viewInstance: NewsView = self.buildView(NewsView.identifier, NewsView.identifier, NewsView.self)
+			let viewInstance: NewsView = self.buildView(NewsView.identifier, NewsView.self)
 			viewInstance.presenter = News(view: viewInstance, router: self)
 			self.view?.setViewControllers([viewInstance], animated: false)
 
 		case .noticedetail:
 
-			let viewInstance: NewsDetailView = self.buildView(NewsDetailView.identifier, NewsDetailView.identifier, NewsDetailView.self)
+			let viewInstance: NewsDetailView = self.buildView(NewsDetailView.identifier, NewsDetailView.self)
 			viewInstance.presenter = NewsDetail(view: viewInstance, router: self, data: data as! Novelty)
 			self.view?.pushViewController(viewInstance, animated: true)
 
@@ -46,8 +46,8 @@ class Router: RouterInterface {
 		}
 	}
 
-	func buildView<T>(_ nameFile: String, _ identifier: String, _ viewClass: T.Type) -> T{
+	func buildView<T>(_ identifier: String, _ viewClass: T.Type) -> T{
 
-		return UIStoryboard(name: nameFile, bundle: nil).instantiateViewController(withIdentifier: identifier) as! T
+		return UIStoryboard(name: identifier, bundle: nil).instantiateViewController(withIdentifier: identifier) as! T
 	}
 }

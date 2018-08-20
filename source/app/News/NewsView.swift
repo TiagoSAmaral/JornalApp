@@ -25,13 +25,17 @@ class NewsView: UIViewController, NewsViewInterface {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-		self.listNews.presenter = self.presenter
-		self.banner.presenter = self.presenter
-
 		self.setBackButtonTitle(with: "")
 		self.listNews.isHidden = true
     }
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+
+		self.listNews.presenter = self.presenter
+		self.banner.presenter = self.presenter
+		self.listNews.isHidden = true
+	}
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
@@ -40,8 +44,11 @@ class NewsView: UIViewController, NewsViewInterface {
 	}
 
 	func reloadList() {
-		self.listNews.reloadData()
-		self.listNews.isHidden = false
+
+		if listNews != nil {
+			self.listNews.reloadData()
+			self.listNews.isHidden = false
+		}
 	}
 
 	func setNavigationTitleView(with text: String) {
@@ -50,6 +57,8 @@ class NewsView: UIViewController, NewsViewInterface {
 	}
 
 	func setBanner(with notice: Novelty, index: Int) {
-		self.banner.setBanner(with: notice, index: index)
+		if self.banner != nil {
+			self.banner.setBanner(with: notice, index: index)
+		}
 	}
 }
